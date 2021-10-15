@@ -1,9 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
 import { Provider } from "react-redux";
-import { applyMiddleware, createStore } from "redux";
-import thunk from "redux-thunk";
-import { composeWithDevTools } from "redux-devtools-extension";
 import { configureStore } from "@reduxjs/toolkit";
 
 // Local imports:
