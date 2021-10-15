@@ -4,16 +4,21 @@ import { Provider } from "react-redux";
 import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
+import { configureStore } from "@reduxjs/toolkit";
 
 // Local imports:
 import App from "./App";
 import rootReducer from "./reducers";
 import "./index.css";
 
-const store = createStore(
-  rootReducer,
-  composeWithDevTools(applyMiddleware(thunk))
-);
+// The new way (using Redux Toolkit):
+const store = configureStore({ reducer: rootReducer });
+
+// The old way:
+// const store = createStore(
+//   rootReducer,
+//   composeWithDevTools(applyMiddleware(thunk))
+// );
 
 render(
   <Provider store={store}>
