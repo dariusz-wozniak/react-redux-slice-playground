@@ -5,7 +5,7 @@ import { configureStore } from "@reduxjs/toolkit";
 
 // Local imports:
 import App from "./App";
-import rootReducer from "./reducers";
+import rootReducer from "./slices";
 import "./index.css";
 
 // The new way (using Redux Toolkit):
